@@ -15,3 +15,4 @@ let now: Date = new Date();
 // array
 // array of strings
 let colors: string[] = ['red', 'green'];
+let numbers: number[] = [1, 2];
