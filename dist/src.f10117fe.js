@@ -136926,6 +136926,10 @@ function () {
     };
   }
 
+  User.prototype.markerContent = function () {
+    return "User Name : " + this.name;
+  };
+
   return User;
 }();
 
@@ -136986,6 +136990,10 @@ function () {
     };
   }
 
+  Company.prototype.markerContent = function () {
+    return "Company Name : " + this.companyName;
+  };
+
   return Company;
 }();
 
@@ -137024,7 +137032,7 @@ function () {
     });
     marker.addListener('click', function () {
       var infoWindow = new google.maps.InfoWindow({
-        content: 'Hello, test text!'
+        content: mappable.markerContent()
       });
       infoWindow.open(_this.googleMap, marker);
     });
