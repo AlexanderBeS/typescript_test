@@ -1,5 +1,5 @@
-// import { User } from './User';
-// import { Company } from './Company';
+import { User } from './User';
+import { Company } from './Company';
 // //import color from './User'; // console.log(color); => 'red' it is for - export default 'red';
 //
 // const user = new User();
@@ -8,11 +8,12 @@
 // const company = new Company();
 // console.log(company);
 
-new google.maps.Map(document.getElementById('map'), {
-    backgroundColor: 'black',
-    zoom: 1,
-    center: {
-        lat: 0,
-        lng: 0
-    }
-});
+import {CustomMap} from "./CustomMap";
+
+const divId: string = 'map';
+const user = new User();
+const company = new Company();
+
+const customMap = new CustomMap(divId);
+customMap.addMarker(user);
+customMap.addMarker(company);
