@@ -1,7 +1,4 @@
 // inrefaces + classes
-
-import axios from "axios";
-
 interface Vehicle {
   name: string;
   year: number;
